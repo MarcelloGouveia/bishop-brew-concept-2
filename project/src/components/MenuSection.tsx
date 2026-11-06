@@ -64,12 +64,12 @@ const categories: MenuCategory[] = [
 
 export default function MenuSection() {
   return (
-    <section id="menu" className="bg-brie-200 py-20 md:py-28">
+    <section id="menu" className="bg-cream-100 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta-500">The Menu</p>
-          <h2 className="mt-4 font-serif text-3xl font-bold sm:text-4xl">Featured Moves</h2>
-          <p className="mt-4 text-base leading-[1.5] text-onyx-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta-600">The Menu</p>
+          <h2 className="mt-4 font-serif text-3xl font-bold sm:text-4xl text-espresso-900">Featured Moves</h2>
+          <p className="mt-4 text-base leading-[1.5] text-espresso-700">
             Every coffee is a pairing. Every melt has a partner. Choose your opening and build from there.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function MenuSection() {
           {categories.map(({ id, title, subtitle, pairing, image, imageAlt, icon: Icon, items }) => (
             <article
               key={id}
-              className="group flex flex-col overflow-hidden rounded-3xl bg-onyx-900 shadow-xl shadow-onyx-900/10 ring-1 ring-onyx-900/5 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl"
+              className="group flex flex-col overflow-hidden rounded-3xl bg-cream-50 border border-espresso-900/10 shadow-lg transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
@@ -87,26 +87,26 @@ export default function MenuSection() {
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-onyx-900 via-onyx-900/20 to-transparent" aria-hidden="true" />
-                <span className="absolute bottom-4 left-4 flex h-11 w-11 items-center justify-center rounded-full bg-gold-500 text-onyx-900">
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/80 via-espresso-950/20 to-transparent" aria-hidden="true" />
+                <span className="absolute bottom-4 left-4 flex h-11 w-11 items-center justify-center rounded-full bg-terracotta-500 text-cream-50">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
               </div>
 
               <div className="flex flex-1 flex-col p-7">
-                <h3 className="font-serif text-2xl font-bold text-gold-400">{title}</h3>
-                <p className="mt-2 text-sm leading-[1.5] text-brie-300">{subtitle}</p>
+                <h3 className="font-serif text-2xl font-bold text-espresso-900">{title}</h3>
+                <p className="mt-2 text-sm leading-[1.5] text-espresso-700">{subtitle}</p>
 
-                <ul className="mt-6 flex-1 space-y-4 border-t border-onyx-700 pt-6">
+                <ul className="mt-6 flex-1 space-y-4 border-t border-espresso-900/10 pt-6">
                   {items.map((item) => (
                     <li key={item.name}>
-                      <p className="text-sm font-semibold text-brie-50">{item.name}</p>
-                      <p className="mt-0.5 text-sm leading-[1.5] text-brie-300">{item.description}</p>
+                      <p className="text-sm font-semibold text-espresso-900">{item.name}</p>
+                      <p className="mt-0.5 text-xs leading-[1.5] text-espresso-700">{item.description}</p>
                     </li>
                   ))}
                 </ul>
 
-                <p className="mt-6 rounded-xl bg-onyx-800 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-cheddar-300">
+                <p className="mt-6 rounded-xl bg-cream-200/60 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-terracotta-700">
                   {pairing}
                 </p>
               </div>
