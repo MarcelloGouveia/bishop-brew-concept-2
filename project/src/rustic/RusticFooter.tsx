@@ -1,5 +1,6 @@
 import { Coffee, Facebook, Instagram } from 'lucide-react';
 import { CAFE_ADDRESS } from '@/data/cafeInfo';
+import BishopIcon from '@/components/BishopIcon';
 
 const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/', icon: Instagram },
@@ -13,7 +14,7 @@ export default function RusticFooter() {
         <div>
           <a href="#rustic-top" className="flex items-center gap-2.5 text-cream-50">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-sage-600">
-              <Coffee className="h-4 w-4" aria-hidden="true" />
+              <BishopIcon className="w-5 h-5" />
             </span>
             <span className="font-display text-lg font-semibold">The Bishops Brew Cafe</span>
           </a>
