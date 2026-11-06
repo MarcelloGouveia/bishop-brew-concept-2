@@ -7,22 +7,7 @@ import SiteFooter from '@/components/SiteFooter';
 import RusticApp from '@/rustic/RusticApp';
 
 function App() {
-  if (window.location.pathname.startsWith('/rustic')) {
-    return <RusticApp />;
-  }
-
-  return (
-    <div className="min-h-screen bg-brie-100">
-      <SiteHeader />
-      <main>
-        <HeroSection />
-        <StorySection />
-        <MenuSection />
-        <LocationSection />
-      </main>
-      <SiteFooter />
-    </div>
-  );
+  return <RusticApp />;
 }
 
 export default App;
