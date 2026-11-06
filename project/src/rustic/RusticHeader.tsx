@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Coffee, Menu, X } from 'lucide-react';
+import BishopIcon from '@/components/BishopIcon';
 
 const navLinks = [
   { href: '#rustic-about', label: 'About' },
@@ -15,7 +16,7 @@ export default function RusticHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#rustic-top" className="flex items-center gap-2.5 text-espresso-800">
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-sage-600 text-cream-50">
-            <Coffee className="h-4 w-4" aria-hidden="true" />
+            <BishopIcon className="w-5 h-5" />
           </span>
           <span className="font-display text-lg font-semibold">The Bishops Brew</span>
         </a>
