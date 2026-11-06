@@ -1,7 +1,7 @@
 import RusticHeader from '@/rustic/RusticHeader';
 import RusticHero from '@/rustic/RusticHero';
 import RusticAbout from '@/rustic/RusticAbout';
-import RusticMenu from '@/rustic/RusticMenu';
+import MenuSection from '@/components/MenuSection';
 import RusticVisit from '@/rustic/RusticVisit';
 import RusticFooter from '@/rustic/RusticFooter';
 
@@ -12,7 +12,7 @@ export default function RusticApp() {
       <main>
         <RusticHero />
         <RusticAbout />
-        <RusticMenu />
+        <MenuSection />
         <RusticVisit />
       </main>
       <RusticFooter />
