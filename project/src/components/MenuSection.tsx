@@ -3,6 +3,7 @@ import type { LucideIcon } from 'lucide-react';
 
 type MenuItem = {
   name: string;
+  price: string;
   description: string;
 };
 
@@ -27,10 +28,10 @@ const categories: MenuCategory[] = [
     imageAlt: 'Espresso being poured into a black cup',
     icon: Coffee,
     items: [
-      { name: 'Espresso', description: 'A bold, syrupy shot with a caramel finish.' },
-      { name: 'Americano', description: 'Long, clean and balanced, the quiet opening move.' },
-      { name: 'Specialty Lattes', description: 'Seasonal flavours, steamed silky smooth.' },
-      { name: 'Cold Brew', description: 'Smooth and slow-steeped, served over ice.' },
+      { name: 'Espresso', price: '$3.50', description: 'A bold, syrupy shot with a caramel finish.' },
+      { name: 'Americano', price: '$4.00', description: 'Long, clean and balanced, the quiet opening move.' },
+      { name: 'Specialty Lattes', price: '$5.50', description: 'Seasonal flavours, steamed silky smooth.' },
+      { name: 'Cold Brew', price: '$5.00', description: 'Smooth and slow-steeped, served over ice.' },
     ],
   },
   {
@@ -42,9 +43,9 @@ const categories: MenuCategory[] = [
     imageAlt: 'Grilled cheese sandwich with melted cheese on a wooden plate',
     icon: Sandwich,
     items: [
-      { name: 'Artisanal Grilled Cheeses', description: 'Aged cheddar, gouda and brie pressed on rustic bread.' },
-      { name: 'Savory Pastries', description: 'Flaky, golden bites built for brunch or a midday break.' },
-      { name: 'Gourmet Cheese Slaws & Spreads', description: 'Bright, tangy sides that make every plate sing.' },
+      { name: 'Artisanal Grilled Cheeses', price: '$12.50', description: 'Aged cheddar, gouda and brie pressed on rustic bread.' },
+      { name: 'Savory Pastries', price: '$5.50', description: 'Flaky, golden bites built for brunch or a midday break.' },
+      { name: 'Gourmet Cheese Slaws & Spreads', price: '$4.50', description: 'Bright, tangy sides that make every plate sing.' },
     ],
   },
   {
@@ -56,8 +57,8 @@ const categories: MenuCategory[] = [
     imageAlt: 'Freshly baked croissants in a glass display case',
     icon: Croissant,
     items: [
-      { name: 'Fresh Bakery', description: 'Croissants and bakes pulled from the morning case.' },
-      { name: 'Seasonal Treats', description: 'Rotating specials that follow the calendar.' },
+      { name: 'Fresh Bakery', price: '$4.00', description: 'Croissants and bakes pulled from the morning case.' },
+      { name: 'Seasonal Treats', price: '$4.75', description: 'Rotating specials that follow the calendar.' },
     ],
   },
 ];
@@ -100,7 +101,10 @@ export default function MenuSection() {
                 <ul className="mt-6 flex-1 space-y-4 border-t border-espresso-900/10 pt-6">
                   {items.map((item) => (
                     <li key={item.name}>
-                      <p className="text-sm font-semibold text-espresso-900">{item.name}</p>
+                      <div className="flex items-baseline justify-between">
+                        <p className="text-sm font-semibold text-espresso-900">{item.name}</p>
+                        <span className="text-sm font-bold text-terracotta-600">{item.price}</span>
+                      </div>
                       <p className="mt-0.5 text-xs leading-[1.5] text-espresso-700">{item.description}</p>
                     </li>
                   ))}
