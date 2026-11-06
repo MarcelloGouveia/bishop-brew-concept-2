@@ -3,8 +3,8 @@ import { CAFE_ADDRESS } from '@/data/cafeInfo';
 import BishopIcon from '@/components/BishopIcon';
 
 const socialLinks = [
-  { label: 'Instagram', href: 'https://www.instagram.com/', icon: Instagram },
-  { label: 'Facebook', href: 'https://www.facebook.com/', icon: Facebook },
+  { label: 'Instagram', href: 'https://www.instagram.com/thebishopsbrew/', icon: Instagram },
+  { label: 'Facebook', href: 'https://www.facebook.com/p/The-Bishops-Brew-Cafe-61572920840098/', icon: Facebook },
 ];
 
 export default function RusticFooter() {
