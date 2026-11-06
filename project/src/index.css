@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brie-100 font-sans leading-[1.5] text-onyx-800 antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif leading-[1.2] text-onyx-900;
+  }
+}
